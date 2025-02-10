@@ -11,6 +11,11 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Liminal Twine.</tw-noscript></noscript></tw-story>
 <tw-storydata name="Liminal Twine" startnode="1" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="28F06486-5763-41B5-BAA6-FCC58C924FF5" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
 
+body
+{position: fixed;
+background: black;
+margin: 4%;}
+
 .orbitron-thin {
   font-family: "Orbitron", serif;
   font-optical-sizing: auto;
@@ -19,6 +24,8 @@
 }
 
 tw-story{
+  width: 1280px;
+  height: 720px;
   font-size: 0.96em;
   font-family: Orbitron;
   color: green;
@@ -34,12 +41,12 @@ tw-story{
 }
 #videoDiv
 {
-  transform: rotate(-1deg) translate(-415px,-240px);
+  
 }
 #myVideo
 {
   border-radius: 2% 2% 2% 2% / 10% 10% 10% 10% ;
-  transform: scale(0.36);
+  transform: scale(0.31) rotate(-1deg) translate(-111%,-95%);
 }
 #textArea
 {
