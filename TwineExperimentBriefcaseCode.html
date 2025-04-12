@@ -9,19 +9,37 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play TwineExperimentBriefcaseCode.</tw-noscript></noscript></tw-story>
-<tw-storydata name="TwineExperimentBriefcaseCode" startnode="1" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="711BDA47-7CFB-4C7F-9819-DDC0C8DF4B85" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story{background-color:white;
-color:white;}
+<tw-storydata name="TwineExperimentBriefcaseCode" startnode="1" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="711BDA47-7CFB-4C7F-9819-DDC0C8DF4B85" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story
+{		
+  padding: 5% 30%;
+  background-color:white;
+color:white;
+}
 
 tw-story input[type="text"]{background-color:black;}
 
+.sampleText{
+   grid-column: 1 / -1; /* Span all 3 columns */
+  text-align: center;
+  color:black
+}
+
 .code-input {
-  
-    display: grid;
-  	grid-template-columns: repeat(3, 1fr);
+ bottom: 10vh;
+  display: grid;
+  justify-content: center;
+  grid-template-rows:2;
+  grid-template-columns: repeat(3, 1fr);
+  position: fixed;
+  width:40%;
 
     }
 
-.grid-item{display:flex; gap:1vw;}
+.grid-item{
+  display:flex; 
+  gap:1vw;
+     justify-content: center;
+}
 
 .code-input input {
 	  background-color:black;
@@ -37,8 +55,27 @@ tw-story input[type="text"]{background-color:black;}
       background-color:grey;
       border-color: #007BFF;
       outline: none;
-    }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="800,350" size="100,100"> {{{ 
+    }
+
+@media (min-width: 0px) {
+  tw-story {
+    padding:
+5% 30%;
+  }
+  
+ 
+  tw-sidebar {
+    left: -5em;
+    width: 3em;
+    position: absolute;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="nobr" position="800,350" size="100,100">{{{
+&lt;div&gt;&lt;img src=&quot;brief.png&quot; style=&quot;width:100%&quot;&gt;&lt;/div&gt;
  &lt;div class=&quot;code-input&quot;&gt;
+ &lt;div class=&quot;sampleText&quot; id=&quot;sampleText&quot;&gt;&lt;p&gt;Crack the code&lt;/p&gt;&lt;/div&gt;
  &lt;div class=&quot;grid-item&quot;&gt;
     &lt;input type=&quot;text&quot; maxlength=&quot;1&quot; /&gt;
     &lt;input type=&quot;text&quot; maxlength=&quot;1&quot; /&gt;
@@ -54,9 +91,9 @@ tw-story input[type="text"]{background-color:black;}
 
 &lt;div id=&quot;result&quot; style=&quot;color:black;&quot;&gt;&lt;/div&gt;
 
-  &lt;script&gt;
+&lt;script&gt;
    const inputs = document.querySelectorAll(&#39;.code-input input&#39;);
-    const resultDiv = document.getElementById(&#39;result&#39;);
+    const resultDiv = document.getElementById(&#39;sampleText&#39;);
 
     // Auto move forward/backward between inputs
     inputs.forEach((input, index) =&gt; {
@@ -95,8 +132,10 @@ tw-story input[type="text"]{background-color:black;}
         resultDiv.appendChild(p);
       }
     });
-  &lt;/script&gt;
-  }}}</tw-passagedata></tw-storydata>
+
+&lt;/script&gt;
+}}}
+</tw-passagedata><tw-passagedata pid="2" name="Untitled Passage 1" tags="" position="925,325" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
